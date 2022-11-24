@@ -1,13 +1,15 @@
 package main;
 
 
+import gamefunction.Board;
+
 import java.awt.*;
 
 public class GameScene extends Scene{
 
-    public GamePanel gamePanel;
-    public GameScene(GamePanel gamePanel){
-        this.gamePanel = gamePanel;
+    public Board board = new Board();
+    public GameScene( ){
+
     }
 
 
@@ -18,7 +20,6 @@ public class GameScene extends Scene{
 
     @Override
     public void draw(Graphics g) {
-        g.setColor(Color.BLACK);
-        g.fillRect(0,0,100,100);
+        board.draw(g);
     }
 }

@@ -1,5 +1,8 @@
 package main;
 
+import controller.KL;
+import controller.ML;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -8,10 +11,17 @@ import java.util.Random;
 public class GamePanel extends JPanel {
 
 	public static GamePanel gamePanel = null;
+	public boolean isRunning;
 	public int currentState;
 	public Scene currentScene;
+	public KL keyListener = new KL();
+	public ML mouseListener = new ML();
 
 	public GamePanel() {
+		addKeyListener(keyListener);
+		addMouseListener(mouseListener);
+		addMouseMotionListener(mouseListener);
+		isRunning = true;
 		changeState(0);
 	}
 
@@ -27,16 +37,20 @@ public class GamePanel extends JPanel {
 		currentState = newState;
 		switch (currentState){
 			case 0:
-				currentScene = new MenuScene();
+				currentScene = new MenuScene(keyListener,mouseListener);
 				break;
 			case 1:
-				currentScene = new GameScene(this);
+				currentScene = new GameScene();
 				break;
 			default:
 				System.out.println("Error: Invalid state");
 				currentScene = null;
 				break;
 		}
+	}
+
+	public void close() {
+		isRunning = false;
 	}
 
 	public void update(double dt){
