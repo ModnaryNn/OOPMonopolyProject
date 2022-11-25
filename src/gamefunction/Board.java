@@ -21,8 +21,8 @@ public class Board {
 
 
     public void draw(Graphics g) {
-        g.setColor(Color.BLACK);
-        g.fillRect(100,100, Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT);
+        //g.setColor(Color.BLACK);
+        //g.fillRect(100,100, Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT);
         g.drawImage(boardIMG, 0, 0, Constant.SCREEN_HEIGHT, Constant.SCREEN_HEIGHT, null);
     }
 }

@@ -1,6 +1,7 @@
 package main;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class GameWindow {
 	private JFrame jframe;
@@ -12,8 +13,8 @@ public class GameWindow {
 		jframe.setTitle(Constant.SCREEN_TITLE);
 		jframe.setSize(Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT);
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		jframe.add(GamePanel.getGamePanel());
 		jframe.setLocationRelativeTo(null);
+		jframe.setResizable(false);
 		jframe.setVisible(true);
 
 	}
