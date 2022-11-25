@@ -31,7 +31,7 @@ public class Game implements Runnable {
 		int frames = 0;
 		long lastCheck = System.currentTimeMillis();
 
-		while (true) {
+		while (gamePanel.isRunning) {
 
 			now = System.nanoTime();
 			if (now - lastFrame >= timePerFrame) {
@@ -47,6 +47,8 @@ public class Game implements Runnable {
 				frames = 0;
 			}
 		}
+
+		System.exit(0);
 
 	}
 

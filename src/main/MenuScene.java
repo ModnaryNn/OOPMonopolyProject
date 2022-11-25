@@ -40,9 +40,9 @@ public class MenuScene extends Scene{
         playCurrentImage = playPressed;
         exitCurrentImage = exit;
 
-        titleRect = new shape.Rect(240,100,300,100);
-        playRect = new shape.Rect(310,280,150,70);
-        exitRect = new shape.Rect(318,355,130,55);
+        titleRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -200,Constant.SCREEN_HEIGHT/12,300,100);
+        playRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -150,Constant.SCREEN_HEIGHT/2 - 100,150,70);
+        exitRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -150,Constant.SCREEN_HEIGHT/2,130,55);
     }
     @Override
     public void update(double dt) {
