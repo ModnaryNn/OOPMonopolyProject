@@ -25,4 +25,8 @@ public class GameWindow {
 		return GameWindow.gameWindow;
 	}
 
+	public void addPanel(JPanel panel) {
+		jframe.add(panel);
+	}
+
 }
