@@ -21,5 +21,7 @@ public class GameScene extends Scene{
     @Override
     public void draw(Graphics g) {
         board.draw(g);
+
+        //player.draw(g);
     }
 }
