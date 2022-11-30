@@ -13,7 +13,7 @@ public class Board {
     BufferedImage boardIMG;
     public Board() {
         try {
-            this.boardIMG = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/assets/monopoly-board.jpg")));
+            this.boardIMG = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/assets/pxArt.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -21,8 +21,6 @@ public class Board {
 
 
     public void draw(Graphics g) {
-        //g.setColor(Color.BLACK);
-        //g.fillRect(100,100, Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT);
         g.drawImage(boardIMG, 0, 0, Constant.SCREEN_HEIGHT, Constant.SCREEN_HEIGHT, null);
     }
 }

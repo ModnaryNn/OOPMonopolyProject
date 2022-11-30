@@ -21,14 +21,13 @@ public class MenuScene extends Scene{
     public Rect playRect, exitRect, titleRect;
     public BufferedImage playCurrentImage, exitCurrentImage;
 
-    BufferedImage boardIMG;
     public MenuScene(KL keyListener, ML mouseListener) {
         this.keyListener = keyListener;
         this.mouseListener = mouseListener;
 
         try {
             BufferedImage spriteSheet = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/assets/menuSprite.png")));
-            title = spriteSheet.getSubimage(0,242,960,240);
+            title = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/assets/monopoly_logo.png")));
             play = spriteSheet.getSubimage(0,121,261,121);
             playPressed = spriteSheet.getSubimage(264,121,261,121);
             exit = spriteSheet.getSubimage(0,0,233,93);
@@ -40,7 +39,7 @@ public class MenuScene extends Scene{
         playCurrentImage = playPressed;
         exitCurrentImage = exit;
 
-        titleRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -200,Constant.SCREEN_HEIGHT/12,300,100);
+        titleRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -200,Constant.SCREEN_HEIGHT/12,400,300);
         playRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -150,Constant.SCREEN_HEIGHT/2 - 100,150,70);
         exitRect = new shape.Rect(Constant.SCREEN_WIDTH / 2 -150,Constant.SCREEN_HEIGHT/2,130,55);
     }
@@ -71,7 +70,7 @@ public class MenuScene extends Scene{
     public void draw(Graphics g) {
         g.setColor(Color.GREEN);
         g.fillRect(0, 0, Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT);
-        g.drawImage(title,(int)titleRect.x,(int)titleRect.y,(int)titleRect.width,(int)titleRect.height,null);
+        g.drawImage(title,(int)titleRect.x,(int)titleRect.y,(int)titleRect.width,(int)titleRect.height,null); //logo
         g.drawImage(playCurrentImage,(int)playRect.x,(int)playRect.y,(int)playRect.width,(int)playRect.height,null);
         g.drawImage(exitCurrentImage,(int)exitRect.x,(int)exitRect.y,(int)exitRect.width,(int)exitRect.height,null);
     }

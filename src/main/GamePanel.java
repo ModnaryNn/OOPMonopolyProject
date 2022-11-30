@@ -18,6 +18,9 @@ public class GamePanel extends JPanel {
 	public ML mouseListener = new ML();
 
 	public GamePanel() {
+		this.setPreferredSize(new Dimension(Constant.SCREEN_WIDTH, Constant.SCREEN_HEIGHT));
+		this.setFocusable(true);
+		this.setDoubleBuffered(true);
 		addKeyListener(keyListener);
 		addMouseListener(mouseListener);
 		addMouseMotionListener(mouseListener);
