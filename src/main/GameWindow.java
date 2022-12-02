@@ -17,7 +17,6 @@ public class GameWindow {
 		jframe.pack();
 		jframe.setLocationRelativeTo(null);
 		jframe.setVisible(true);
-
 	}
 
 	public static GameWindow getGameWindow() {
@@ -26,6 +25,8 @@ public class GameWindow {
 		}
 		return GameWindow.gameWindow;
 	}
+
+
 
 	public void addPanel(JPanel panel) {
 		jframe.add(panel);
