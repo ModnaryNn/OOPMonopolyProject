@@ -7,15 +7,15 @@ public class Game implements Runnable {
 	private Thread gameThread;
 	private final int FPS_SET = 120;
 
+	//CONSTRUCTOR
 	public Game() {
-
-		gamePanel = GamePanel.getGamePanel();
-		gameWindow = GameWindow.getGameWindow();
+		gamePanel 	= 		GamePanel.getGamePanel();
+		gameWindow 	= 		GameWindow.getGameWindow();
 		gamePanel.requestFocus();
 		startGameLoop();
-
 	}
 
+	//METHODS
 	private void startGameLoop() {
 		gameThread = new Thread(this);
 		gameThread.start();
@@ -47,9 +47,7 @@ public class Game implements Runnable {
 				frames = 0;
 			}
 		}
-
 		System.exit(0);
-
 	}
 
 }
