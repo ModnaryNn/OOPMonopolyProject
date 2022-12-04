@@ -8,6 +8,7 @@ public class Player {
     public boolean isOutOfGame;
     public int jailTurns;
     public int railCount;
+    public int utilityCount;
 
     public Player(String name){
         money = 1500;

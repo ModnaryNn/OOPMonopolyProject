@@ -1,57 +1,55 @@
-package monopoly.gameboards;
-
+package gamefunction.board;
 
 import gamefunction.GameBoard;
-import gamefunction.Squares.GoSquare;
-import gui.Position;
+import gamefunction.enums.CardType;
+import gamefunction.enums.ColorGroup;
+import gamefunction.square.*;
 
-public class GameBoardDefault extends GameBoard {
-    public GameBoardDefault() {
-        super();
+public class DefaultBoard extends GameBoard {
 
-        int rrBaseRent = 25;
-        int rrPrice = 200;
+    int rrBaseRent = 25;
+    int rrPrice = 200;
 
-        GoSquare go = new GoSquare(0, "Go", new Position(0, 0));
-        PropertySquare dp1 = new PropertySquare();
-        CardSquare cc1 = new CardSquare(CardType.CC, "Community Chest 1");
-        PropertySquare dp2 = new PropertySquare();
-        PropertySquare dp3 = new PropertySquare();
-        RailRoadSquare rr1 = new RailRoadSquare();
-        PropertySquare lb1 = new PropertySquare();
-        CardSquare c1 = new CardSquare(CardType.CHANCE, "Chance 1");
-        PropertySquare lb2 = new PropertySquare();
-        PropertySquare lb3 = new PropertySquare();
-        JailSquare jail = new JailSquare();
-        PropertySquare p1 = new PropertySquare();
-        UtilitySquare u1 = new UtilitySquare();
-        PropertySquare p2 = new PropertySquare();
-        PropertySquare p3 = new PropertySquare();
-        RailRoadSquare rr2 = new RailRoadSquare();
-        PropertySquare o1 = new PropertySquare();
-        CardSquare cc2 = new CardSquare(CardType.CC, "Community Chest 2");
-        PropertySquare o2 = new PropertySquare();
-        PropertySquare o3 = new PropertySquare();
-        FreeParkingSquare fp = new FreeParkingSquare();
-        PropertySquare r1 = new PropertySquare();
-        CardSquare c2 = new CardSquare(CardType.CHANCE, "Chance 2");
-        PropertySquare r2 = new PropertySquare();
-        PropertySquare r3 = new PropertySquare();
-        RailRoadSquare rr3 = new RailRoadSquare();
-        PropertySquare y1 = new PropertySquare();
-        PropertySquare y2 = new PropertySquare();
-        UtilitySquare u2 = new UtilitySquare();
-        PropertySquare y3 = new PropertySquare();
-        GoToJailSquare goToJail = new GoToJailSquare();
-        PropertySquare g1 = new PropertySquare();
-        PropertySquare g2 = new PropertySquare();
-        CardSquare cc3 = new CardSquare(CardType.CC, "Community Chest 3");
-        PropertySquare g3 = new PropertySquare();
-        RailRoadSquare rr4 = new RailRoadSquare();
-        CardSquare c3 = new CardSquare(CardType.CHANCE, "Chance 3");
-        PropertySquare db1 = new PropertySquare();
-        PropertySquare db2 = new PropertySquare();
-        PropertySquare db3 = new PropertySquare();
+    PropertySquare dp1 = new PropertySquare();
+    ///CardSquare cc1 = new CardSquare(CardType.CC, "Community Chest 1");
+    PropertySquare dp2 = new PropertySquare();
+    PropertySquare dp3 = new PropertySquare();
+    RailRoadSquare rr1 = new RailRoadSquare();
+    PropertySquare lb1 = new PropertySquare();
+    //CardSquare c1 = new CardSquare(CardType.CHANCE, "Chance 1");
+    PropertySquare lb2 = new PropertySquare();
+    PropertySquare lb3 = new PropertySquare();
+    JailSquare jail = new JailSquare();
+    PropertySquare p1 = new PropertySquare();
+    UtilitySquare u1 = new UtilitySquare();
+    PropertySquare p2 = new PropertySquare();
+    PropertySquare p3 = new PropertySquare();
+    RailRoadSquare rr2 = new RailRoadSquare();
+    PropertySquare o1 = new PropertySquare();
+    //CardSquare cc2 = new CardSquare(CardType.CC, "Community Chest 2");
+    PropertySquare o2 = new PropertySquare();
+    PropertySquare o3 = new PropertySquare();
+    FreeParkingSquare fp = new FreeParkingSquare();
+    PropertySquare r1 = new PropertySquare();
+    //CardSquare c2 = new CardSquare(CardType.CHANCE, "Chance 2");
+    PropertySquare r2 = new PropertySquare();
+    PropertySquare r3 = new PropertySquare();
+    RailRoadSquare rr3 = new RailRoadSquare();
+    PropertySquare y1 = new PropertySquare();
+    PropertySquare y2 = new PropertySquare();
+    UtilitySquare u2 = new UtilitySquare();
+    PropertySquare y3 = new PropertySquare();
+    GoToJailSquare goToJail = new GoToJailSquare();
+    PropertySquare g1 = new PropertySquare();
+    PropertySquare g2 = new PropertySquare();
+    //CardSquare cc3 = new CardSquare(CardType.CC, "Community Chest 3");
+    PropertySquare g3 = new PropertySquare();
+    RailRoadSquare rr4 = new RailRoadSquare();
+    //CardSquare c3 = new CardSquare(CardType.CHANCE, "Chance 3");
+
+    PropertySquare db1 = new PropertySquare();
+    PropertySquare db2 = new PropertySquare();
+    PropertySquare db3 = new PropertySquare();
 
         dp1.setPrice(60);
         dp1.setColorGroup(ColorGroup.PURPLE);
@@ -259,5 +257,4 @@ public class GameBoardDefault extends GameBoard {
         super.addSquare(db3);
 
 
-    }
 }

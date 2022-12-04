@@ -10,12 +10,6 @@ public abstract class  Square {
     public Position position;
 
     //CONSTRUCTOR
-    public Square(int id, String name, Position position){
-        this.available = true;
-        this.id = id;
-        this.name = name;
-        this.position = position;
-    }
 
     //METHODS
     public void playAction(GameHandler gameHandler) {}

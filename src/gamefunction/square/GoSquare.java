@@ -1,4 +1,4 @@
-package gamefunction.Squares;
+package gamefunction.square;
 
 import gamefunction.GameHandler;
 import gamefunction.Square;

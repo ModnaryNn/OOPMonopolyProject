@@ -1,7 +1,5 @@
-package gamefunction.Squares;
+package gamefunction.enums;
 
-public enum ColorGroup {
-    package monopoly.gameboards.enums;
 
     public enum ColorGroup {
         RAILROAD,
@@ -17,4 +15,3 @@ public enum ColorGroup {
         YELLOW
     }
 
-}
